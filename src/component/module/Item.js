@@ -5,16 +5,18 @@ function Item({item}){
 
     return(
         <>
-        <div>
-            <img src={image_link} alt={name}/>
-        </div>
-            <strong>{name}</strong>
-            <strong>${price}</strong>
-        <div>
-            <Button color="orange">구매하기</Button>
-        </div>
-        <div>
-            <p>{description}</p>
+        <div className="item-info">
+            <div className="flex-center">
+                <img src={image_link} alt={name}/>
+                <ul>   
+                    <li className="prod-name">{name}</li>
+                    <li className="prod-price">${price}</li>
+                    <li><Button color="orange">구매하기</Button></li>
+                </ul>
+            </div>
+            <div className="prod-desc">
+                <p>{description}</p>
+            </div>
         </div>
         </>
     )

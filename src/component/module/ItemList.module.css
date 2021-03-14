@@ -1,0 +1,5 @@
+.item_name{ font-size: 20px; height: 30px; text-align: center;}
+.item_type{ max-width:70px; background:#74acff; color: #fff; border-radius: 15px; text-align :center; padding: 0 5px;}
+.item_price{font-weight: 800; font-size: 18px; margin-left: 10px; }
+.item_img{ display: block; margin: 0 auto; margin-top: 10px;}
+.item_rate{display: none;}

@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react';
 import { Loader } from 'semantic-ui-react';
 
-const Post = ({item}) => {
+const Post = ({item, name}) => {
 
   return (
     <>
@@ -33,8 +33,7 @@ export async function getServerSideProps(context){
 
     return{
         props:{
-            item:data,
-
+            item:data
         }
     }
 

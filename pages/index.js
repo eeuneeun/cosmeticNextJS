@@ -22,6 +22,7 @@ export default function Home() {
 
   useEffect(()=>{
     getData();
+    console.log(process.env.NEXT_PUBLIC_API_URL)
   }, [])
 
   return (

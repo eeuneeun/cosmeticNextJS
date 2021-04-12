@@ -5,17 +5,17 @@ import {Button, Form, FormTextArea} from "semantic-ui-react";
 
 export default function Admin(){
     const router = useRouter();
-    const [isLogin, setIsLogin] =
-     useState(false);
+    const [isLogin, setIsLogin] = useState(false);
 
     function chk(){
-        axios.get('/api/isLogin').then((res)=>{
+        axios.get('/api/isLogin')
+        .then((res)=>{
             if( res.status === 200 && res.data.name ){
                 //login 
                 setIsLogin(true)
             } else {
                 //logout
-                Router.push('/login');
+                router.push('/login');
             }
         })
     }
@@ -32,6 +32,7 @@ export default function Admin(){
     useEffect(()=>{
         chk()
     },[]);
+
     return(
         <>
         <div>

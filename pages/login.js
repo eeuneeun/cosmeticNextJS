@@ -6,7 +6,7 @@ export default function Login(){
     const router = useRouter();
 
     function login(){
-        axios.post('api/login')
+        axios.post('/api/login')
         .then(res => {
             if(res.status === 200){
                 router.push('/admin')
@@ -14,7 +14,7 @@ export default function Login(){
         })
     }
     return(
-        <div>
+        <div style={{padding : "200px 0", textAlign:"center"}}>
             <Form>
                 <Form.Field inline>
                     <input placeholder="ID"/>
